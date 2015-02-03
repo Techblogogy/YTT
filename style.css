@@ -1,0 +1,248 @@
+body
+{
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    font-family: Myriad Pro
+}
+
+#gameH
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	width: 100.0vw;
+	height: 100.0vh;
+}
+
+.actionB
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	/*width: 10%;*/
+	height: 10vh;
+
+	background-image: url('PlusB.svg');
+	background-color: #009933;
+
+	border: 0;
+
+	cursor: pointer;
+}
+
+.actionB:hover
+{
+	background-color: #59cd87;
+	/*background: url('Assets/bSheet.png') 0 -64px;*/
+}
+
+.actionB:active
+{
+	background-color: #5fac7d;
+	/*background: url('Assets/bSheet.png') 0 -128px;*/
+}
+
+/*Action Manu*/
+#aMenu
+{
+	position: absolute;;
+
+	/*top: 20%;*/
+	top: 20.0vh;
+	left: 0;
+
+	background-color: /*#930119*/ #EB9100;
+
+	/*width: 15%;*/
+	/*height: 60%;*/
+
+	width: 15.0vw;
+	height: 60.0vh;
+
+	overflow: hidden;
+}
+
+/* aMenu Container */
+.aMenuC
+{
+	position: absolute;
+
+	top: 0px;
+	left: 0px;
+
+	width: 100%;
+	height: 100%;
+
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+/* Action Menu Button Class */
+.aMenuB
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	width: 100%;
+	height: 5.0vh;
+
+	cursor: default;
+
+	border-bottom: 2px solid white;
+
+	transition: background-color 0.2s;
+}
+
+.aMenuB span
+{
+	color: white;
+	margin-left: 2%;
+
+	font-size: 2.5vh;
+	line-height: 5.0vh;
+}
+
+.aMenuBA:hover
+{
+	background-color: rgba(255,255,255,0.2);
+	cursor: pointer;
+}
+
+.aMenuBA:active
+{
+	background-color: rgba(255,255,255,0.3);
+	cursor: pointer;
+}
+
+/* Name Input */
+
+#inpN
+{
+	-webkit-appearance: none;
+	border: none;
+	border-bottom: 2px dashed white;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	/*width: 97%;*/
+	width: 15vw;
+	/*height: 10%;*/
+	height: 5.0vh;
+
+	font-family: Myriad Pro;
+	font-weight: bold;
+	font-size: 2.5vh;
+
+	line-height: 5.0vh;
+
+	color: white;
+
+	padding: 0;
+	padding-left: 2%;
+
+	background-color: #EB9100;
+}
+
+#inpN:focus
+{
+	outline: none;
+}
+
+#chgH
+{
+	font-family: Myriad Pro;
+	color: white;
+
+	margin-top: 2%;
+	margin-left: 2%;	
+}
+
+/*Menu Image*/
+.mImg
+{
+	height: 20%;
+
+    position: absolute;
+    /*left: 5%;*/
+    top: 15%;
+
+    border: 2px solid white;
+}
+
+.mImg:hover
+{
+	background-color: rgba(255,255,255,0.2);
+	cursor: pointer;
+}
+
+.mImg:active
+{
+	background-color: rgba(255,255,255,0.3);
+	cursor: pointer;
+}
+
+/*Slider*/
+.sld
+{
+	-webkit-appearance: none;
+
+	margin: 0;
+
+	position: absolute;
+	left: 5%;
+	top: 12vh;
+
+	width: 90%;
+}
+
+.sld::-webkit-slider-runnable-track
+{
+	background: #ffffff;
+	height: 1.0vh;
+	border: none;
+}
+
+.sld::-webkit-slider-thumb
+{
+	-webkit-appearance: none;
+	border: none;
+
+	background: #009933;
+
+	width: 2.0vh;
+	height: 4.0vh;
+
+	margin-top: -1.2vh;
+}
+
+.sld:focus
+{
+	outline: none;
+}
+
+.labl
+{
+	cursor: default;
+
+	position: absolute;
+	left: 0;
+
+	color: white;
+	margin-left: 4%;
+
+	font-size: 2.5vh;
+}
+
+
+
+
