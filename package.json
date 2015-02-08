@@ -1,4 +1,9 @@
 {
 	"name":"YouTube Tycoon",
-	"main":"index.html"
+	"main":"index.html",
+
+	"window":
+	{
+		"toolbar": false
+	}
 }
