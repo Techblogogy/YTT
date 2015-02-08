@@ -73,7 +73,18 @@ var menu = {
 
 		items: ["Funny", "Serious", "Informative", "Entertaining"],
 
-		next: "prod"
+		nxtB: "Film",
+		next: "sldEdit"
+	},
+
+	sldEdit: {
+		type: "Sliders",
+		head: "Edit Video",
+
+		items: ["Length","Jump Cuts","BG Music","Audio Leveling"],
+
+		nxtB: "Edit",
+		next: ""
 	}
 };
 
@@ -156,7 +167,7 @@ function SideMenu()
 	};
 
 	//UI Button Events
-	this.AButtonE = function(e)
+	this.AButtonE = function(e) //Master Button Event
 	{
 		var d = e.data;
 
@@ -269,13 +280,13 @@ function SideMenu()
 
 			this.AButtonClk(img, dt, i, id, dt.itemsN[i]);
 
-			if (dt.unlocked[i])
-				img.show();
-			else
-				img.hide();
+			// if (dt.unlocked[i])
+			// 	img.show();
+			// else
+			// 	img.hide();
 
-			if (!dt.bought[i])
-				img.addClass("aMenuD");
+			// if (!dt.bought[i])
+			// 	img.addClass("aMenuD");
 
 			dt.itemsInst.push(img);
 		}
@@ -289,8 +300,36 @@ function SideMenu()
 			this.ASlider(id+i, ctr, dt.items[i], 7+i*10);
 		}
 
-		var b = this.AButton(id+"NxtB", ctr, "Film", "");
+		var pb = $("<progress value='0' max='100' id='"+id+"PB' class='prBar'></progress>");
+		ctr.append(pb);
+		pb.hide();
+
+		var b = this.AButton(id+"NxtB", ctr, dt.nxtB, "");
 		b.addClass("aMenuNxt");
-		this.AButtonClk(b, dt, 0, id, dt.next);
+
+		b.click({ mn: dt, id: 0, mId: id, nItem: dt.next, pBar: pb, fnc: this.AButtonE }, this.prgClk);
 	};
+	this.prgClk = function (e)
+	{
+		var d = e.data;
+
+		//Disable Sliders
+		for (var i=0, l=d.mn.items.length; i<l; i++)
+		{
+			console.log("#"+d.mId+"Sld"+i);
+			$("#"+d.mId+i+"Sld").prop("disabled", true);
+		}
+
+		//Disable Button, Enable Progbar
+		d.pBar.show();
+		$(this).hide();
+
+		//Start ProgBar Movement
+		d.pBar.animate({
+			value: "100"
+		}, 10000, function ()
+		{
+			d.fnc(e);
+		});
+	}
 }

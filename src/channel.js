@@ -6,13 +6,13 @@ var ranges = [
 function Channel ()
 {
 	//Properties
-	this.name = 0;
+	this.name = "";
 
-	this.subs = 5300;
+	this.subs = 0;
 	this.views = 0;
 
-	this.income = 1000;
-	this.budget = 100000;
+	this.income = 0;
+	this.budget = 0;
 
 	this.uiDOM = ["#subI", "#vwsI", "#incI", "#bgtI"];
 

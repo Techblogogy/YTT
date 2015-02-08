@@ -332,6 +332,31 @@ body
 	font-size: 2.5vh;
 }
 
+.prBar
+{
+	-webkit-appearance: none;
 
+	width: 90%;
+	height: 4.0vh;
+
+	position: absolute;
+	left: 5%;
+	bottom: 1vh;
+}
+
+.prBar::-webkit-progress-bar
+{
+	background-color: #DE8900;
+
+	border-radius: 10px;
+}
+
+.prBar::-webkit-progress-value
+{
+	-webkit-appearance: none;
+
+	background-color: #00822B;
+	border-radius: 10px;
+}
 
 
